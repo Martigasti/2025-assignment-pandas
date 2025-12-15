@@ -49,7 +49,8 @@ def merge_referendum_and_areas(referendum, regions_and_departments):
     """
     # Remove Z codes
     referendum = referendum[
-        ~referendum['Department code'].str.contains('Z')].copy()
+        ~referendum['Department code'].str.contains('Z')
+        ].copy()
 
     # Normalize department code to 2 numbers, ie '01'
     referendum['Department code'] = (
